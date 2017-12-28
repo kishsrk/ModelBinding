@@ -1,0 +1,36 @@
+﻿@model ModelBinding.Models.Employee
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1>Enter Employee Details</h1>
+
+        @using (Html.BeginForm("Redirects","Home",FormMethod.Post))
+        {
+            @Html.Label("Enter your First Name")
+            <br />
+            @Html.TextBoxFor(a=>a.FirstName)
+            <br />
+            @Html.Label("Enter your Last Name")
+            <br />
+            @Html.TextBoxFor(a => a.LastName)
+            <br />
+            @Html.Label("Enter your Age")
+            <br />
+            @Html.EditorFor(a => a.Age)
+            <br />
+            <br />
+            <input type="submit" value="Send Data" />
+        }
+        <br />
+        
+    </div>
+</body>
+</html>
